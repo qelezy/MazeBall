@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+
+    <!--
+        Правило №1: Явно доверять домену localtunnel и всем его поддоменам.
+        Это говорит приложению, что HTTPS-сертификаты от *.loca.lt безопасны.
+    -->
+    <domain-config>
+        <domain includeSubdomains="true">loca.lt</domain>
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </domain-config>
+
+    <!--
+        Правило №2: Разрешить HTTP (нешифрованный) трафик для стандартных
+        диапазонов локальных IP-адресов. Это нужно для прямого подключения
+        без туннеля, если вы захотите к нему вернуться.
+    -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">10.0.2.2</domain> <!-- IP-адрес хоста для эмулятора Android -->
+        <domain includeSubdomains="true">192.168.0.0/16</domain>
+        <domain includeSubdomains="true">172.16.0.0/12</domain>
+        <domain includeSubdomains="true">10.0.0.0/8</domain>
+    </domain-config>
+
+    <!--
+        Базовое правило: для всех остальных доменов, не упомянутых выше,
+        запретить нешифрованный трафик. Это безопасная практика.
+    -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+
+</network-security-config>

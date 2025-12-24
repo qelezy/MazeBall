@@ -1,0 +1,44 @@
+{
+    "leaderboards": {
+        "1": [
+            {
+                "deviceId": "4c33cfa5-b575-4c67-968c-1fbcdeecec2d",
+                "playerName": "mobile_player",
+                "timeMillis": 2190
+            },
+            {
+                "deviceId": "0cbc1aef-0804-4594-bd42-c6eb1730c891",
+                "playerName": "user1",
+                "timeMillis": 2521
+            }
+        ],
+        "2": [
+            {
+                "deviceId": "4c33cfa5-b575-4c67-968c-1fbcdeecec2d",
+                "playerName": "mobile_player",
+                "timeMillis": 6061
+            },
+            {
+                "deviceId": "0cbc1aef-0804-4594-bd42-c6eb1730c891",
+                "playerName": "user1",
+                "timeMillis": 9856
+            }
+        ],
+        "3": [
+            {
+                "deviceId": "4c33cfa5-b575-4c67-968c-1fbcdeecec2d",
+                "playerName": "mobile_player",
+                "timeMillis": 49884
+            },
+            {
+                "deviceId": "0cbc1aef-0804-4594-bd42-c6eb1730c891",
+                "playerName": "user1",
+                "timeMillis": 16313
+            }
+        ]
+    },
+    "playerNames": {
+        "4c33cfa5-b575-4c67-968c-1fbcdeecec2d": "mobile_player",
+        "0cbc1aef-0804-4594-bd42-c6eb1730c891": "user1"
+    }
+}
