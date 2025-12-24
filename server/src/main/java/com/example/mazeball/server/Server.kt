@@ -62,7 +62,7 @@ fun Application.mainModule() {
 
     routing {
 
-        get("/leaderboards/all") {
+        get("/leaderboard/all") {
             val processed = leaderboards.mapValues { (_, list) ->
                 list.filter { it.playerName.isNotBlank() }
                     .sortedBy { it.timeMillis }

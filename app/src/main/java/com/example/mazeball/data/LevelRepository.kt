@@ -74,7 +74,7 @@ class LevelRepository(val userPreferencesRepository: UserPreferencesRepository) 
         }
         val baseUrl = getBaseUrl()
         if (baseUrl.isEmpty()) return emptyMap()
-        val newLeaderboards = client.get("$baseUrl/leaderboards/all").body<Map<Int, List<LeaderboardEntry>>>()
+        val newLeaderboards = client.get("$baseUrl/leaderboard/all").body<Map<Int, List<LeaderboardEntry>>>()
         updateCache(newLeaderboards)
         return newLeaderboards
     }
